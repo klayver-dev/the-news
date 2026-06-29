@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📱 the news — Case Front-end & Design
 
-## Getting Started
+## 🚀 Sobre este repositório
 
-First, run the development server:
+Este projeto é uma **implementação prática inicial** do case de Front-end & Design do the news.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Nesta versão foram construídas as bases principais da aplicação:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Splash Screen inicial
+- Estrutura do Chat (UI base funcional)
+- Sistema de mensagens com estado dinâmico (envio de mensagens)
+- Layout e componentes principais do fluxo de mensagens
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+⚠️ A lista de conversas ainda não foi implementada nesta versão por limitação de tempo — será incluída nas próximas evoluções do projeto.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧭 Escopo desta versão
 
-To learn more about Next.js, take a look at the following resources:
+### ✔️ Implementado
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Splash screen com redirecionamento automático
+- Estrutura do chat principal
+- Lista de mensagens mockadas inicial + estado dinâmico
+- Envio de mensagens em tempo real (useState)
+- Scroll automático no chat
+- Componentização inicial (ChatHeader, ChatMessage, ChatInput)
+- Integração ChatInput → ChatPage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ❌ Não implementado (nesta versão)
 
-## Deploy on Vercel
+- Tela/lista de conversas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 Objetivo técnico
+
+Esta versão foca em:
+
+- Estruturação de UI baseada em componentes reutilizáveis
+- Experiência de chat fluida e interativa
+- Gerenciamento de estado local para mensagens
+- Base arquitetural escalável para futuras features
+
+---
+
+## 🧱 Stack utilizada
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- React Hooks
+
+---
+
+## 🧾 Contexto do case
+
+Este projeto faz parte da etapa prática do processo seletivo para **Dev Front-end & Design do the news**.
+
+O objetivo do case é avaliar:
+
+- Capacidade de interpretação de produto
+- Decisões de UI/UX
+- Consistência visual
+- Raciocínio de produto e evolução incremental
+
+---
+
+## 📤 Entrega
+
+Projeto em desenvolvimento contínuo.
+
+Versão atual representa uma base funcional interativa.
