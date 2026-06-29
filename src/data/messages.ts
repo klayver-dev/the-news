@@ -1,6 +1,19 @@
-export const messages = [
+export type Message = {
+  id: string;
+  name: string;
+  color: string;
+  text: string;
+  time: string;
+  isOwn: boolean;
+  reply?: {
+    name: string;
+    text: string;
+  };
+};
+
+export const messages: Message[] = [
   {
-    id: 1,
+    id: "1",
     name: "Ana Beatriz",
     color: "#4F6FF3",
     text: "Qual seleção vocês acham que chega mais forte para a Copa?",
@@ -8,7 +21,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 2,
+    id: "2",
     name: "Lucas",
     color: "#FFCE06",
     text: "Pra mim o Brasil vem muito bem dessa vez 🇧🇷",
@@ -16,7 +29,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 3,
+    id: "3",
     name: "Mariana",
     color: "#A855F7",
     text: "A Espanha também está jogando muito.",
@@ -24,7 +37,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 4,
+    id: "4",
     name: "Você",
     color: "#FFFFFF",
     text: "Estou curioso para ver como o Brasil vai se sair contra as seleções europeias.",
@@ -32,7 +45,7 @@ export const messages = [
     isOwn: true,
   },
   {
-    id: 5,
+    id: "5",
     name: "Pedro Henrique",
     color: "#00DD1A",
     text: "Também acho! Os amistosos deram bastante confiança.",
@@ -44,7 +57,7 @@ export const messages = [
     },
   },
   {
-    id: 6,
+    id: "6",
     name: "Camila",
     color: "#F97316",
     text: "Acho que essa Copa vai ser uma das mais equilibradas dos últimos anos.",
@@ -52,7 +65,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 7,
+    id: "7",
     name: "Rafael",
     color: "#22C55E",
     text: "Quem vocês acham que termina como artilheiro?",
@@ -60,7 +73,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 8,
+    id: "8",
     name: "Você",
     color: "#FFFFFF",
     text: "Meu palpite é que teremos uma surpresa esse ano.",
@@ -68,7 +81,7 @@ export const messages = [
     isOwn: true,
   },
   {
-    id: 9,
+    id: "9",
     name: "Julia",
     color: "#EC4899",
     text: "O mais legal é acompanhar tudo comentando por aqui 😄",
@@ -76,7 +89,7 @@ export const messages = [
     isOwn: false,
   },
   {
-    id: 10,
+    id: "10",
     name: "Bruno",
     color: "#06B6D4",
     text: "Já estou ansioso para o primeiro jogo!",

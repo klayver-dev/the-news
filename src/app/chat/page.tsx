@@ -10,13 +10,33 @@ import { ScrollBottomButton } from "@/components/chat/ScrollBottomButton";
 
 import { messages as initialMessages } from "@/data/messages";
 
+/* =========================
+   TYPE DO MESSAGE
+========================= */
+type Message = {
+  id: string;
+  name: string;
+  color: string;
+  text: string;
+  time: string;
+  isOwn: boolean;
+  reply?: {
+    name: string;
+    text: string;
+  };
+};
+
 export default function ChatPage() {
   const messagesRef = useRef<HTMLDivElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState<Message[]>(
+    initialMessages as Message[],
+  );
 
-  // 🔥 scroll inicial
+  /* =========================
+     SCROLL INICIAL
+  ========================= */
   useEffect(() => {
     requestAnimationFrame(() => {
       bottomRef.current?.scrollIntoView({
@@ -26,16 +46,20 @@ export default function ChatPage() {
     });
   }, []);
 
-  // 🔥 scroll sempre que nova mensagem chega
+  /* =========================
+     SCROLL AO NOVO MESSAGE
+  ========================= */
   useEffect(() => {
     bottomRef.current?.scrollIntoView({
       behavior: "smooth",
     });
   }, [messages]);
 
-  // ✅ adicionar mensagem
+  /* =========================
+     ENVIAR MENSAGEM
+  ========================= */
   function handleSendMessage(text: string) {
-    const newMessage = {
+    const newMessage: Message = {
       id: crypto.randomUUID(),
       name: "Você",
       color: "#fff",
@@ -79,7 +103,7 @@ export default function ChatPage() {
         <ScrollBottomButton containerRef={messagesRef} />
       </section>
 
-      {/* Campo de envio */}
+      {/* Input */}
       <ChatInput onSend={handleSendMessage} />
     </main>
   );
