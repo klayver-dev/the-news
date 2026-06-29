@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --color-brand-primary: #ffce06;
+
+  /* Background */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #12121a;
+  --color-bg-glass: rgb(25 28 32 / 65%);
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #bab8b8;
+
+  /* Accent */
+  --color-accent-primary: #4f6ff3;
+  --color-accent-dark: #06027c;
+
+  /* Feedback */
+  --color-success: #00dd1a;
+
+  /* Border */
+  --color-border: #4d4d4d;
+
+  /* Input */
+  --color-input: rgb(11 10 15 / 75%);
+
+  /* Effects */
+  --glass-blur: 6px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Font */
+  --font-sans: var(--font-roboto);
+
+  /* Colors */
+  --color-brand-primary: var(--color-brand-primary);
+
+  --color-bg-primary: var(--color-bg-primary);
+  --color-bg-secondary: var(--color-bg-secondary);
+  --color-bg-glass: var(--color-bg-glass);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+
+  --color-accent-primary: var(--color-accent-primary);
+  --color-accent-dark: var(--color-accent-dark);
+
+  --color-success: var(--color-success);
+
+  --color-border: var(--color-border);
+  --color-input: var(--color-input);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-bg-secondary) transparent;
+}
+
+/* Chrome, Edge e Safari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-secondary);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a35;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100dvh;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-roboto), sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
